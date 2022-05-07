@@ -100,6 +100,7 @@ input, select {
  transform: translateX(-100%); 
  }
 }
+#slides { width:1366px; height:768px; border:1px solid yellow; }
 .slides {
     display:none;
 }
@@ -233,269 +234,6 @@ input, select {
     background-repeat: no-repeat;
     background-position: center;
 }
-#arena {
-    background-color: #000000;
-    background-image: url('res/atcg.png');
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    overflow: hidden;
-}
-#qcontainer {
-    width: 100%;
-    height: 100%;
-    background-color: black;
-}
-#qbanner {
-    position: fixed;
-    margin-top: -65px;
-    width: 100%;
-    height: 100px;
-    background-color: black;
-    color: gray;
-    font-weight: bold;
-    font-size: 16pt;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-}
-.stop_on {
-    background-color: black;
-    background-image: url('res/stop_on.png');
-}
-.stop_off {
-    background-color: silver;
-    background-image: url('res/stop_off.png');
-}
-#status {
-	font-size: 10pt;
-    font-family: Arial, Helvetica, sans-serif;
-    color: lime;
-}
-#dummy { width:100%; height: 200px; }
-#playerform {
-    padding: 60px 100px 0px 100px;
-    color: #fff;
-    text-align: center;
-}
-#playerlist {
-    padding: 60px 100px 0px 100px;
-    color: #fff;
-    text-align: center;
-}
-.glow {
-    font-size: 12pt ! important;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
-	white-space: nowrap;
-    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #49ff18, 0 0 30px #49ff18, 0 0 40px #49ff18, 0 0 55px #49ff18, 0 0 75px #49ff18;
-}
-.glow2 {
-    font-size: 16pt ! important;
-    padding-bottom: 5px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color:gold;
-    text-shadow: 0 0 3px orchid, 0 0 5px darkorchid, 0 0 10px darkorchid, 0 0 15px #d60a92, 0 0 25px #df23b6, 0 0 30px #db3cb9, 0 0 40px #d355ad, 0 0 60px #f88ed8    
-}
-.player_info {
-    text-align: left;
-    vertical-align: top;;
-    background-color: grey;
-    display: inline-block;
-    width:300px;
-}
-.player_name {
-    text-align: left;
-    vertical-align: top;;
-    font-size: 24pt;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;    
-    word-wrap: none;
-}
-.player_location {
-    text-align: left;
-    vertical-align: top;;
-    font-size: 14pt;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;    
-    word-wrap: none;    
-}
-.avatar {
-    width: 42px;
-    height: 58px;
-    background-image: url('res/mavatar.png');
-    background-repeat: no-repeat;
-    margin: 0px;
-}
-.avatar0 { background-position: 0px 0px; }
-.avatar1 { background-position: -42px 0px;}
-.avatar2 { background-position: -84px 0px;}
-.avatar3 { background-position: -126px 0px;}
-.avatar4 { background-position: 0px -58px; }
-.avatar5 { background-position: -42px -58px;}
-.avatar6 { background-position: -84px -58px;}
-.avatar7 { background-position: -126px -58px;}
-.avatar8 { background-position: 0px -116px; }
-.avatar9 { background-position: -42px -116px;}
-.avatar10 { background-position: -84px -116px;}
-.avatar11 { background-position: -126px -116px;}
-
-#list {
-    width:240px;
-    margin: 0 auto;
-}
-.shield {
-    width: 50px;
-    height: 50px;
-    background-image: url('res/minishields.png');
-    background-repeat: no-repeat;
-    margin: 0px;
-	border-radius: 10px;
-}
-.shield1 { background-position: 0px 0px; }
-.shield2 { background-position: -50px 0px; }
-.shield3 { background-position: -100px 0px; }
-.shield4 { background-position: -150px 0px; }
-.shield5 { background-position: 0px -50px; }
-.shield6 { background-position: -50px -50px; }
-.shield7 { background-position: -100px -50px; }
-.shield8 { background-position: -150px -50px; }
-.shield9 { background-position: 0px -100px; }
-.shield10 { background-position: -50px -100px; }
-.shield11 { background-position: -100px -100px; }
-.shield12 { background-position: -150px -100px; }
-
-.tcbtn {
-    width: 64px;
-    height: 64px;
-    background-image: url('res/tickcross.png');
-    background-repeat: no-repeat;
-    margin: 0 30px;
-    padding: 0px;
-    background-color: transparent;
-}
-.btnT1 { background-position: 0px 0px; }
-.btnT0 { background-position: 0px -64px; }
-.btnC1 { background-position: -67px 0px;}
-.btnC0 { background-position: -67px -64px;}
-
-#tick { visibility: hidden; }
-
-#progressBar {
-  position: absolute;
-  bottom: 15px;
-  left: 50%;
-  margin-left: -150px;
-  width: 300px;
-  height: 14px;
-  background-color: darkgreen;
-  border:1px solid darkkhaki;
-  border-radius: 5px;
-  display: none;
-  pointer-events: none; 
-}
-
-#bar {
-    position:fixed;
-    width:300px;
-    height:14px;
-    border-radius: 5px;
-    clip: rect(0,0,14px,0);
-}
-#quitpanel {
-    width:100%;
-    height:100%;
-    padding-top: 100px;
-    display: none;
-}
-#quitmsg {
-    padding-bottom: 50px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 24pt;
-    color: white;
-    text-align: center;
-}
-#winnerlist {
-    margin: 0px;
-    padding: 0px;
-    width:100%;
-    height:100%;
-    text-align:center;
-    color:aqua;
-    font-weight: bold;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 24pt;
-    padding-top: 100px;
-}
-.small {
-    font-size: 18pt;
-}
-#TGIF {
-    visibility: hidden;
-    position: absolute;
-    opacity: 0.7;
-    z-index:777;
-    bottom: 30px;
-    left: 50px;
-    right: 60px;
-    color:white;
-    font-family: bold;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 10pt;
-}
-
-
-/* */
-@media only screen and (min-width: 700px) 
-{
-#quitpanel {
-    padding-top: 200px;
-}
-.header {
-    padding-top: 40px;
-}
-.glow {
-    font-size: 16pt ! important;
-}
-.glow2 {
-    font-size: 18pt ! important;
-}
-#status {font-size: 14pt;}
-#dummy { width:100%; height: 0px; }
-#entryform {
-    width: 100%;
-    height: 350px;
-	overflow-y: auto ! important;
-}
-.entry {
-    font-size: 18pt;
-    padding: 5px;
-}
-#list {
-    width:400px;
-    margin: 0 auto;
-	padding-top: 10px;
-}
-#shield_info {
-    margin-bottom: 15px;
-}
-.shield {
-    width: 95px;
-    height: 95px;
-	margin: 0px;
-    background-image: url('res/shields.png');
-    background-repeat: no-repeat;
-	border-radius: 20px;
-}
-.shield1 { background-position: 0px 0px; }
-.shield2 { background-position: -98px 0px; }
-.shield3 { background-position: -196px 0px; }
-.shield4 { background-position: -294px 0px; }
-.shield5 { background-position: 0px -100px; }
-.shield6 { background-position: -98px -100px; }
-.shield7 { background-position: -196px -100px; }
-.shield8 { background-position: -294px -100px; }
-.shield9 { background-position: 0px -200px; }
-.shield10 { background-position: -98px -200px; }
-.shield11 { background-position: -196px -200px; }
-.shield12 { background-position: -294px -200px; }
-}
 .hidden { display: none; }
 
 .player {
@@ -506,42 +244,42 @@ input, select {
 	background-color: none;
 }
 #player1b { position: absolute; left: 10px; top: 10px; background-position: 0px 12px; opacity: 0.5; pointer-events:none;}
-#player2b { position: absolute; left: 10px; top: 250px; background-position: 0px -100px; opacity: 0.5;pointer-events:none;}
+#player2b { position: absolute; left: 10px; top: 350px; background-position: 0px -100px; opacity: 0.5;pointer-events:none;}
 #player3b { position: absolute; right: 10px; top: 10px; background-position: -70px 12px; opacity: 0.5;pointer-events:none;}
-#player4b { position: absolute; right: 10px; top: 250px; background-position: -70px -100px; opacity: 0.5;pointer-events:none;}
+#player4b { position: absolute; right: 10px; top: 350px; background-position: -70px -100px; opacity: 0.5;pointer-events:none;}
 #player1 { position: absolute; left: 10px; top: 10px; background-position: 0px 12px;}
-#player2 { position: absolute; left: 10px; top: 250px; background-position: 0px -100px;}
+#player2 { position: absolute; left: 10px; top: 350px; background-position: 0px -100px;}
 #player3 { position: absolute; right: 10px; top: 10px; background-position: -70px 12px;}
-#player4 { position: absolute; right: 10px; top: 250px; background-position: -70px -100px;}
+#player4 { position: absolute; right: 10px; top: 350px; background-position: -70px -100px;}
 #arrow {
-    width: 30px;
-    height: 43px;
+    width: 65px;
+    height: 87px;
     background-image: url('res/arrow.png');
     background-repeat: no-repeat;
 	background-color: none;
 	position: relative; 
-	left: 86px; 
-	top: 66px; 
+	left: 100px; 
+	top: 62px; 
 }
 #spinner {
-    width: 194px;
-    height: 194px;
+    width: 250px;
+    height: 250px;
     background-image: url('res/spinner.png');
     background-repeat: no-repeat;
 	background-color: none;
 	position: absolute; 
-	right: 110px; 
-	top: 10px; 
+	right: 162px; 
+	top: 26px; 
 }
 #bank {
-    width: 180px;
-    height: 180px;
+    width: 220px;
+    height: 220px;
     background-image: url('res/bank_atp.png');
     background-repeat: no-repeat;
 	background-color: none;
 	position: absolute; 
-	left: 110px; 
-	bottom: 10px; 
+	left: 164px; 
+	bottom: 24px; 
 }
 .atp {
     width: 48px;
@@ -554,14 +292,14 @@ input, select {
 	bottom: 20px; 
 }
 .card {
-    width: 80px;
-    height: 114px;
+    width: 120px;
+    height: 170px;
     background-repeat: no-repeat;
 	background-color: none;
 	position: absolute; 
 }
 .powercard {
-	right: 210px; 
+	left: 950px; 
 	bottom: 10px; 
 }
 .power1 { background-image: url('res/powercard.png'); }
@@ -574,7 +312,7 @@ input, select {
 .power4b { background-image: url('res/power4.png');width: 233px; height: 330px;}
 .eventcard {
     background-image: url('res/eventcard.png');
-	right: 115px; 
+	left: 1085px; 
 	bottom: 10px; 
 }
 .event1 { background-image: url('res/eventcard.png'); }
@@ -596,36 +334,39 @@ input, select {
 	text-align: center;
 	padding-top:140px;
 }
-#acard { left:400px; top:10px; }
+#acard { left:550px; top:10px; }
 .acard { background-image: url('res/acard.png');}
 .acardb { background-image: url('res/aquestions.png'); width: 233px; height: 330px;}
-#tcard { left:500px; top:10px; }
+#tcard { left:700px; top:10px; }
 .tcard { background-image: url('res/tcard.png');}
 .tcardb { background-image: url('res/tquestions.png'); width: 233px; height: 330px; }
-#ccard { left: 400px; bottom: 10px; }
+#ccard { left: 550px; bottom: 10px; }
 .ccard { background-image: url('res/ccard.png');}
 .ccardb { background-image: url('res/cquestions.png'); width: 233px; height: 330px; }
-#gcard { left: 500px; bottom: 10px; }
+#gcard { left: 700px; bottom: 10px; }
 .gcard { background-image: url('res/gcard.png');}
 .gcardb { background-image: url('res/gquestions.png'); width: 233px; height: 330px; }
+#main { position:absolute; width:1368px; height:768px; left:50%; top:50%; margin-left:-689px; margin-top:-384px;}
 </style>
 </head>    
 <body onselectstart="return false;" oncontextmenu="return false;">
+<div id="main">
     <div class="slides">
         <section id="intro" onclick="startToPlay();">
                 <div id="intromsg"><center>CLICK HERE to start ...</center></div>
         </section>
         <section id="game">
 		</section>
-      </div>  
-	  <div id="bank" class="bank hidden"></div>
-	  <div id="spinner" class="hidden">
-	  <div id="arrow" onclick="spin(this)"></div>
-	  </div>
-	  <div id="acard" class="card acard hidden"></div>
-	  <div id="tcard" class="card tcard hidden"></div>
-	  <div id="ccard" class="card ccard hidden"></div>
-	  <div id="gcard" class="card gcard hidden"></div>
-<script src="atcg.js"></script>
+    </div>  
+	<div id="bank" class="hidden"></div>
+	<div id="spinner" class="hidden">
+		<div id="arrow" onclick="spin(this)"></div>
+	</div>
+	<div id="acard" class="card acard hidden"></div>
+	<div id="tcard" class="card tcard hidden"></div>
+	<div id="ccard" class="card ccard hidden"></div>
+	<div id="gcard" class="card gcard hidden"></div>
+</div>	
+	<script src="atcg.js"></script>
 </body>
 </html>

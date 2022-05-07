@@ -1538,17 +1538,20 @@ function _spin(el) {
 		}, 5);
 		var s = 'rotate('+deg+'deg)';
 		el.style.transform=s;
-		deg += Math.floor(Math.random()*10);
+		deg += Math.floor(Math.random()*5 + ((300-n)/40)) ;
 		if (deg > 360) { deg = 0; }
+	} else {
+		fx.stop();
 	}
 }
 function spin(el) {
 	if (busy) return;
 	//el.style.display = 'none';
 	//el.style.display = 'block';
-	el.style.transformOrigin='11px 31px'
+	el.style.transformOrigin='26px 63px'
 	n = 0;
 	_spin(el);
+	fx.play();
 }
 
 function shuffleInts(x) {
@@ -1584,6 +1587,14 @@ function startToPlay()
     introTimerID = 0;
     introMsgDiv.innerHTML = '<center><i>have fun</i></center>';
     introMsgDiv.style.opacity = 1.0;
+    fx = new Howl({
+        src: ['res/fx/roll.mp3'],
+        html5: true,
+        buffer:true,
+        autoplay:false,
+        preload:true,
+        loop:false
+    });	
 
     bgMusic = new Howl({
         src: ['res/fx/atcg-ukulele.mp3'],
@@ -1615,20 +1626,6 @@ function startToPlay()
 				var limit = limits[a];
 				var arr = shuffleInts(limit);
 				questions[a] = arr;
-			}
-			for(var i=1;i<5;i++) {
-				var name = 'player' + i;
-				var tag = document.createElement("div");				
-				tag.id = name;
-				tag.className = "player";
-				document.body.appendChild(tag);
-				bidaks.push(new PlainDraggable(tag));
-				name += 'b';
-				tag = document.createElement("div");				
-				tag.id = name;
-				tag.className = "player";
-				document.body.appendChild(tag);
-				bidaks.push(new PlainDraggable(tag));
 			}
 
 			el = document.getElementById('spinner');
@@ -1699,8 +1696,8 @@ function startToPlay()
 			for(var i=0;i<100;i++) {
 				var tag = document.createElement("div");
 				tag.className = "atp";
-				left = Math.floor(Math.random()*80)+20;
-				bottom = Math.floor(Math.random()*80)+20;
+				left = Math.floor(Math.random()*100)+20*Math.floor(Math.random()*4);
+				bottom = Math.floor(Math.random()*100)+20*Math.floor(Math.random()*4);;
 				tag.style.left = left + "px";
 				tag.style.bottom = bottom + "px";
 				el.appendChild(tag);
@@ -1708,6 +1705,23 @@ function startToPlay()
 				e.containment = document.body;
 				atps.push(e);
 			}
+
+			for(var i=1;i<5;i++) {
+				var name = 'player' + i;
+				var tag = document.createElement("div");				
+				tag.id = name;
+				tag.className = "player";
+				document.body.appendChild(tag);
+				bidaks.push(new PlainDraggable(tag));
+				name += 'b';
+				tag = document.createElement("div");				
+				tag.id = name;
+				tag.className = "player";
+				document.body.appendChild(tag);
+				bidaks.push(new PlainDraggable(tag));
+			}
+
+
 		}, 1000);
     }, 1000);
  }
@@ -1722,7 +1736,7 @@ function initATCG() {
 		});
 		PIXI.utils.skipHello();
 	} 
-    */	
+    */
     mySlider = slider('.slides');
     barCounter = quizTimeoutInSeconds?quizTimeoutInSeconds:30; 
 /*
